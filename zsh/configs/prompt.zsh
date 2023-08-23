@@ -1,10 +1,28 @@
-# modify the prompt to contain git branch name if applicable
-git_prompt_info() {
-  current_branch=$(git current-branch 2> /dev/null)
-  if [[ -n $current_branch ]]; then
-    echo " %{$fg_bold[green]%}$current_branch%{$reset_color%}"
+# show character if changes are pending
+git_dirty() {
+  if command git diff-index --quiet HEAD 2> /dev/null; then
+    echo ""
+  else
+    echo "[%{$fg[red]%}+%{$reset_color%}]"
   fi
 }
+
+# adds the current branch name in green
+git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null)
+  branch="[%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}]"
+  if [[ -n $ref ]]; then
+    echo "$branch$(git_dirty)"
+  fi
+}
+
+# # modify the prompt to contain git branch name if applicable
+# git_prompt_info() {
+#   current_branch=$(git current-branch 2> /dev/null)
+#   if [[ -n $current_branch ]]; then
+#     echo " %{$fg_bold[green]%}$current_branch%{$reset_color%}"
+#   fi
+# }
 
 setopt promptsubst
 

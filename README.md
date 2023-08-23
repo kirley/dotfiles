@@ -1,3 +1,25 @@
+# AK's dotfiles - Fork'd
+
+### Instructions
+If you type `rcup` from anywhere in termial it will copy alisaes of these files from /dotfiles folder to the root of your computer. So slick!
+
+#### Install
+```
+cd ~/
+git clone git@github.com:luggageforward/dotfiles.git
+cd dotfiles
+env RCRC=$HOME/dotfiles/rcrc rcup
+rcup
+```
+
+that's it.
+
+
+
+
+
+
+
 # thoughtbot dotfiles
 
 ![prompt](http://images.thoughtbot.com/thoughtbot-dotfiles-prompt.png)

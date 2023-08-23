@@ -7,3 +7,6 @@ setopt extendedglob
 
 # Allow [ or ] whereever you want
 unsetopt nomatch
+
+# CD into frequently used directories
+cdpath=($HOME/Work $HOME)

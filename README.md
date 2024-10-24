@@ -14,6 +14,15 @@ rcup
 
 that's it.
 
+#### Edits / Changes
+If you make changes, this is a normal git repository and you can check it into github.  
+
+1.  Make changes
+2.  $ git add .
+3.  $ git commit -am "I made some changes"
+4.  $ git push
+5.  ... pssst, don't forget to run `rcup` locally.
+
 
 
 

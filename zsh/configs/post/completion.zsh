@@ -12,3 +12,8 @@ fi;
 # disable zsh bundled function mtools command mcd
 # which causes a conflict.
 compdef -d mcd
+
+# dynamically load ngrok completion
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi

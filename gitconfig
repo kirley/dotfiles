@@ -19,3 +19,6 @@
   colorMoved = zebra
   # Detect copies as well as renames
   renames = copies
+[user]
+	name = Aaron Kirley
+	email = kirley@gmail.com

@@ -1,1 +1,2 @@
+# add asdf support for .ruby-version file
 legacy_version_file = yes

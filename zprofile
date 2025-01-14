@@ -5,3 +5,6 @@ elif [ -d "~/.linuxbrew" ]; then
 elif [ -d "/home/linuxbrew" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+
+__NSCFConstantString initialize error fix
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
